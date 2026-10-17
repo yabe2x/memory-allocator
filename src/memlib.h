@@ -1,0 +1,15 @@
+#ifndef MEMLIB_H
+#define MEMLIB_H
+
+#include <stddef.h>
+
+/* Simulated sbrk() over a reserved mmap region, so mm can run alongside libc malloc. */
+void mem_init(void);
+void mem_deinit(void);
+void *mem_sbrk(int incr);
+void mem_reset_brk(void);
+void *mem_heap_lo(void);
+void *mem_heap_hi(void);
+size_t mem_heapsize(void);
+
+#endif

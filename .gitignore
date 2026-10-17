@@ -1,0 +1,4 @@
+test_mm
+test_mm_debug
+bench_mm
+*.o
